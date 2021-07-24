@@ -28,8 +28,12 @@ public class Medidas {
                 area = calcularAreaDoQuadrado();
                 break;
             case "2":
-                //ToDo: calcular area do retangulo// quer dizer pendente, a fazer
+                area = calcularAreaDoRetangulo();
                 break;
+            case "3":
+                area = calcularAreaDoTriangulo();
+                break;
+
             default:
                 System.out.println("Valor Inválido: " + opcao);
         }
@@ -49,9 +53,30 @@ public class Medidas {
 
         System.out.println("Digite o tamanho do lado: ");
         lado = entrada.nextInt();// leitura do tamanho do lado e guarda no lado
-        return lado * lado;// fazer a conta, elevado a 2 e já retorna o resultado
+        return lado * lado;// fazer a conta, multiplicado a 2 e já retorna o resultado
 
     }
 
+   public static int calcularAreaDoRetangulo(){
+        int altura;
+        int base;
 
+       System.out.println("Digite a altura:  ");
+       altura = entrada.nextInt();
+       System.out.println("Digite o base:  " );
+       base = entrada.nextInt();
+       return altura * base;
+
+   }
+
+   public static int calcularAreaDoTriangulo(){
+       int altura;
+       int base;
+
+       System.out.println("Digite a altura:  ");
+       altura = entrada.nextInt();
+       System.out.println("Digite o base:  " );
+       base = entrada.nextInt();
+       return (altura * base)/2;
+   }
 }
