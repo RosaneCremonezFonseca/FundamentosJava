@@ -21,7 +21,7 @@ public class Medidas {
         //! OPCAO quer dizer se opção diferente
         //toUpperCase transforma qualquer opção em maicusculo
 
-        while(!opcao.toUpperCase().equals("S")) {
+       // while(!opcao.toUpperCase().equals("S")) {
 
             System.out.println("Escolha o Calculo de Desejado");
             System.out.println("(1) - Area do Quadrado");
@@ -31,6 +31,7 @@ public class Medidas {
             System.out.println("(5) - Tabuada ");
             System.out.println("(6) - Fibonacci");
             System.out.println("(7) - Contagem Regressiva");
+            System.out.println("(8) - Divisao po Zero");// extrutura Try / Catch - tratamento
             System.out.println("(S)  - Sair");
 
             // fazer se comunicar com as funções
@@ -59,13 +60,16 @@ public class Medidas {
                 case "s":
                     System.out.println("Agradecemos pela preferencia!  Fui!!");// aqui seria um fim para o While...
                     break;
+                case "8":
+                    divisaoPorZero();
+                    break;
                 default:
                     System.out.println("Valor Inválido: " + opcao);
             }
             if (area > 0) {
                 System.out.println("A area é de " + area + " m²");
             }
-        }
+       // }
 
     }
 
@@ -176,4 +180,24 @@ public class Medidas {
             System.out.println(i);
         }
     }
-}
+    //Exrutura Try / Catch- para tratamento- seria uma zona de segurança
+    public static void divisaoPorZero() {
+        try{
+        System.out.print("Qual é o dividendo? ( Numero a ser dividido)  ");
+        float dividendo = entrada.nextFloat();
+        System.out.println(" Qual é o divisor? (numero que vai dividir o dividendo) ");
+        float divisor = entrada.nextFloat();
+
+            System.out.println("O resultado é:  " + dividendo / divisor);
+            }
+        catch(Exception e){
+                                                                           // "e" de exceção...
+            System.out.println("Não é possivel dividir por zero!! - Erro: "+ e.getMessage());
+             }
+            finally{
+            System.out.println("Por hoje é só pessoal!!!");
+        }
+
+        }
+
+    }
