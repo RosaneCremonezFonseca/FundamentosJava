@@ -180,7 +180,13 @@ public class Medidas {
             System.out.println(i);
         }
     }
-    //Exrutura Try / Catch- para tratamento- seria uma zona de segurança
+
+
+
+
+
+
+    //Extrutura Try / Catch- para tratamento- seria uma zona de segurança
     public static void divisaoPorZero() {
         try{
         System.out.print("Qual é o dividendo? ( Numero a ser dividido)  ");
